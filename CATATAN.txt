@@ -1,0 +1,29 @@
+tambah di app/providers/AppServiceProvider
+use Illuminate\Support\Facades\Schema;
+Schema::defaultStringLength(191);
+
+bikin
+php artisan make:auth
+
+php artisan make:controller ListingsController --resource
+
+php artisan route:list
+
+php artisan make:model Listing -m
+
+composer require "laravelcollective/html"
+"laravelcollective/html":"^5.4.0" tambah di composer.json
+composer update
+
+config/app.php
+
+php artisan make:provider FormServiceProvider
+trus taro di config/app.php
+ App\Providers\FromServiceProvider::class,
+
+ use Form;  di FormServiceProvider
+
+ buat folder component/form di folder views bikin file text,textarea,dll
+
+akses kontrol
+   $this->middleware('auth', ['except' => ['index','show']]);
